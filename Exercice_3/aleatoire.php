@@ -59,7 +59,7 @@ echo '<b> <p>Le Nombre de valeur pair est => '.$countPair.'</p><b>';
 
 echo '<b> Le Nombre de valeur impair est => '.$countImpaire.'</b>';
 
-echo '<p> Le pourcentage de nombre pair est => '.pourcentage($countPair,$nbvaleur,$ValeurPoucentage).' %</p>';
+echo '<p> Le pourcentage de nomb    re pair est => '.pourcentage($countPair,$nbvaleur,$ValeurPoucentage).' %</p>';
 
 echo '<p> Le pourcentage de nombre impair est => '.pourcentage($countImpaire,$nbvaleur,$ValeurPoucentage).' %</p>';
 

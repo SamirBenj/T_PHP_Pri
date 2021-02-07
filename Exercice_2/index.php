@@ -1,5 +1,5 @@
 <?php
-$v =0;
+$v = 0;
 $countPair = 0;
 $countImPair = 0;
 //fonction pair ou impair
@@ -30,12 +30,13 @@ function pourcentage($nbTest,$Sum,$pourcentage) {
     print "</form>";
 
 
-    $arr = array();
+    //$NBRE = array();
+    
     if(isset($_POST['txt0']))
     {
         for($i=0; $i<9; $i++) {
-            $arr[$i] = $_POST['txt'.$i];
-           if(is_pair2($arr[$i])){
+            $NBRE[$i] = $_POST['txt'.$i];
+           if(is_pair2($NBRE[$i])){
                $countPair++;
            }else{
             $countImPair++;
@@ -44,11 +45,7 @@ function pourcentage($nbTest,$Sum,$pourcentage) {
         }
     }
 
-    
-  
-
- 
-
+    print_r($NBRE); 
 echo '<b> <p>Le Nombre de valeur pair est => '.$countPair.'</p><b>';
 
 echo '<b> Le Nombre de valeur impair est => '.$countImPair.'</b>';
@@ -57,6 +54,6 @@ echo '<p> Le pourcentage de nombre pair est => '.pourcentage($countPair,10,100).
 
 echo '<p> Le pourcentage de nombre impair est => '.pourcentage($countImPair,10,100).' %</p>';
 
-echo '<b> La Somme des valeurs du tableaux est => '.array_sum($arr).'</b>';
+echo '<b> La Somme des valeurs du tableaux est => '.array_sum($NBRE).'</b>';
 
 ?>

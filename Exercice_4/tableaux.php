@@ -1,43 +1,40 @@
 <?php
-
 $nbvaleur = isset($_POST['nbvaleur']) ? $_POST['nbvaleur'] : '';
 
 //N = 10
 $N10 = 10;
 $CountNInf5  = 0;
-
+$table = array(10,30,100,100,300,100);
 if( isset($_POST['submit'])) {
 
 
     for($i=1;$i<=$N10;$i++)
     {
+        /*
             $nombre[$i] = rand(1,10);
             if($nombre[$i] <= 5 ) {
                 $CountNInf5++;
             }
-
+        */
+            /**********tableau  */
+            
+            for($j=0;$j<=5;$j++) {
+  
+                $table[$j] = rand(1,10);
+               
+                   //echo '<p>'.$table[$j].'</p>';
+                   if($table[$j] <= 5 ) {
+                    $CountNInf5++;
+                }
+                print_r($table);
+               }
+               
     }
-
-
-}
-
-$test = 0;
-
-$table = array(10,30,100,100,300,100);
-
-
-for($j=0;$j<=5;$j++) {
-
-for($table[$j]) {
-
-}   
- $nombre[$table[$j]] = rand(1,10);
-
-    echo '<p>'.$nombre[$table[$j]].'</p>';
 }
 
 
-/*
+
+
 echo '
     <style>
         td , th {
@@ -50,7 +47,7 @@ echo '
         }
     </style>
 
-<table >
+<table>
     <tr>
         <th>N</th>
         <th>Nbre <= 5</th>
@@ -86,5 +83,5 @@ echo '
     </tr>
 </table>'
 
-*/
+
 ?>
